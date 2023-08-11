@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>0705_jq</title>
+    <style style="display: block;" contenteditable="">
+        .main{
+            padding: 20px;
+            border: 1px solid blue;
+        }
+        .parent{
+            padding: 20px;
+            border: 1px solid red;
+        }
+        table,tr,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="main">
+        main
+        <div class="parent">
+            parent
+            <ul>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>amy</td>
+                    <td>bob</td>
+                    <td>cat</td>
+                </tr>
+            </table>
+            <ul>
+                <li>d</li>
+                <li>e</li>
+                <li>f</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>dog</td>
+                    <td>eat</td>
+                    <td>fox</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".main").hover(function(){
+                    $(this).css("background","lightpink")
+                    
+                })
+        });
+    </script>
+
 </body>
 </html>
